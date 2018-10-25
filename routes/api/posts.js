@@ -5,7 +5,7 @@ const passport = require('passport');
 
 // Post model
 const Post = require('../../models/Post');
-const Profile = require('../../models/Profile')
+const Profile = require('../../models/Profile');
 
 // Validation
 const validatePostInput = require('../../validation/post');
@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
         .catch(err => res.status(404).json({ nopostsfound: 'No posts found' }))
 });
 
-// @route  GET api/post/:id
+// @route  GET api/posts/:id
 // @desc   Get all posts
 // @access Public
 router.get('/:id', (req, res) => {
